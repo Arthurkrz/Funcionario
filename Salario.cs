@@ -9,15 +9,19 @@ namespace Funcionario
         public string nome;
         public double salarioBruto;
         public int imposto;
-        public double CalcularSalario(double salarioBruto, int imposto)
-        {
-            return salarioBruto - (salarioBruto * (imposto / 100.0));
-        }
         public Salario(string nome, double salarioBruto, int imposto)
         {
             this.nome = nome;
             this.salarioBruto = salarioBruto;
             this.imposto = imposto;
+        }
+        public double CalcularSalario(double salarioBruto, int imposto)
+        {
+            return salarioBruto - (salarioBruto * (imposto / 100.0));
+        }
+        public void Incremento(double porcentagem)
+        {
+            salarioBruto += salarioBruto * (porcentagem / 100);
         }
     }
 }
