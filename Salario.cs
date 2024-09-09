@@ -7,13 +7,13 @@ namespace Funcionario
     class Salario
     {
         private string _nome;
-        public double salarioBruto;
-        public int imposto;
+        public double SalarioBruto { get; set; }
+        public int Imposto { get; set; }
         public Salario(string nome, double salarioBruto, int imposto)
         {
             Nome = nome;
-            this.salarioBruto = salarioBruto;
-            this.imposto = imposto;
+            this.SalarioBruto = salarioBruto;
+            this.Imposto = imposto;
         }
         public string Nome
         {
@@ -43,7 +43,7 @@ namespace Funcionario
         }
         public void Incremento(double porcentagem)
         {
-            salarioBruto += salarioBruto * (porcentagem / 100);
+            SalarioBruto += SalarioBruto * (porcentagem / 100);
         }
     }
 }

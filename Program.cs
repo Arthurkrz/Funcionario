@@ -14,11 +14,11 @@ namespace Funcionario
             {
                 Salario f = new Salario(nome, salarioBruto, imposto);
                 Console.Clear();
-                Console.WriteLine($"Funcionário {f.Nome} apresenta salário líquido de R${f.CalcularSalario(f.salarioBruto, f.imposto):F2}.");
+                Console.WriteLine($"Funcionário {f.Nome} apresenta salário líquido de R${f.CalcularSalario(f.SalarioBruto, f.Imposto):F2}.");
                 Console.WriteLine("Digite o valor do incremento em porcentagem:");
                 double porcentagem = double.Parse(Console.ReadLine());
                 f.Incremento(porcentagem);
-                Console.WriteLine($"Funcionário {f.Nome} apresenta salário líquido de R${f.CalcularSalario(f.salarioBruto, f.imposto):F2}.");
+                Console.WriteLine($"Funcionário {f.Nome} apresenta salário líquido de R${f.CalcularSalario(f.SalarioBruto, f.Imposto):F2}.");
             }
             else
             {
