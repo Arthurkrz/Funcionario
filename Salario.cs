@@ -6,14 +6,36 @@ namespace Funcionario
 {
     class Salario
     {
-        public string nome;
+        private string _nome;
         public double salarioBruto;
         public int imposto;
         public Salario(string nome, double salarioBruto, int imposto)
         {
-            this.nome = nome;
+            Nome = nome;
             this.salarioBruto = salarioBruto;
             this.imposto = imposto;
+        }
+        public string Nome
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_nome))
+                {
+                    return "N/A";
+                }
+                return _nome;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _nome = value;
+                }
+                else
+                {
+                    _nome = "N/A";
+                }
+            }
         }
         public double CalcularSalario(double salarioBruto, int imposto)
         {
